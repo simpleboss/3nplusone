@@ -19,3 +19,4 @@ def return_len(number):
 
 len_input_number = return_len(input_number)
 print(len_input_number)
+print("hello")
