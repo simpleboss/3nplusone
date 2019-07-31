@@ -1,22 +1,25 @@
-input_number = 3
-
-count_list = [i for i in range(input_number + 1)]
+input_number1 = 3
+input_number2 = 5
 
 
 def return_len(number):
-    count_list[number] = []
+    count_list = []
     i = number
     while i != 1:
-        count_list[number].append(i)
+        count_list.append(i)
         if i % 2 == 0:
             i /= 2
         else:
             i = i * 3 + 1
-    count_list[number].append(1)
+    count_list.append(1)
 
-    return len(count_list[input_number])
+    return len(count_list)
 
 
-len_input_number = return_len(input_number)
+len_input_number = []
+for j in range(input_number1, input_number2+1):
+    len_input_number.append(return_len(j))
+
 print(len_input_number)
-print("hello")
+print(max(len_input_number))
+
