@@ -1,5 +1,8 @@
-input_number1 = 3
-input_number2 = 5
+input_number1, input_number2 = map(int, input().split())
+if input_number1 > input_number2:
+    temp = input_number1
+    input_number1 = input_number2
+    input_number2 = temp
 
 
 def return_len(number):
@@ -20,6 +23,6 @@ len_input_number = []
 for j in range(input_number1, input_number2+1):
     len_input_number.append(return_len(j))
 
-print(len_input_number)
+# print(len_input_number)
 print(max(len_input_number))
 
